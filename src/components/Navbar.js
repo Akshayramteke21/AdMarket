@@ -50,9 +50,15 @@ function Navbar() {
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               {user ? (
                 <>
-                  <li className="nav-item">
-                    <Link className="nav-link" to={`/profile/${user.uid}`}>
+                  <li className="nav-item my-2">
+                    <Link className="nav-link fw-bold" to={`/profile/${user.uid}`}>
                       Profile
+                    </Link>
+                  </li>
+
+                  <li className="nav-item my-2">
+                    <Link className="nav-link fw-bold" to="/sell">
+                      Sell
                     </Link>
                   </li>
                   <button
@@ -65,12 +71,12 @@ function Navbar() {
               ) : (
                 <>
                   <li className="nav-item">
-                    <Link className="nav-link" to="/auth/register">
+                    <Link className="nav-link fw-bold" to="/auth/register">
                       Register
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" to="/auth/login">
+                    <Link className="nav-link fw-bold" to="/auth/login">
                       Login
                     </Link>
                   </li>

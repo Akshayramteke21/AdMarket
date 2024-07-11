@@ -88,7 +88,7 @@ const Login = () => {
         </button>
       </div>
 
-      <div className=" register-btntext-sm text-primary decoration-none mb-3 ">
+      <div className=" register-btn text-sm text-primary decoration-none mb-3 ">
         Not a user?{" "}
         <Link to="/auth/register" className="text-decoration-none">
           {" "}

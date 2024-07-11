@@ -9,13 +9,18 @@ import AuthProvider from "./context/auth";
 import ForgetPassword from "./Pages/auth/ForgetPassword";
 import ResetPassword from "./Pages/auth/ResetPassword";
 import Profile from "./Pages/Profile";
-
+import PrivateRoutes from "./components/PrivateRoutes";
+import Sell from "./Pages/Sell";
 function App() {
   return (
     <AuthProvider>
       <BrowserRouter>
         <Navbar />
+
         <Routes>
+          <Route element={<PrivateRoutes />}>
+            <Route path="/sell" element={<Sell />} />
+          </Route>
           <Route path="/" element={<Home />} />
           <Route path="/auth/register" element={<Register />} />
           <Route path="/auth/login" element={<Login />} />
